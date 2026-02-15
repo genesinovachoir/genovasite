@@ -1,0 +1,463 @@
+.header-container {
+    background-color: #111524;
+    padding: 0.5rem 0;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    /* Changed to fixed for sticky behavior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease;
+    /* Smooth transition for height/padding */
+    z-index: 50;
+    /* Ensure it stays on top */
+}
+
+/* Minimal Sticky State */
+.header-container.sticky-header {
+    padding: 0.4rem 0;
+    /* Slightly more padding for better icon centering */
+    background-color: rgba(17, 21, 36, 0.65);
+    /* 65% opacity for elegance */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Decorative Spiral/Curve Lines */
+.header-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+}
+
+.header-container.sticky-header .header-bg-decoration {
+    opacity: 0;
+    /* Hide decoration on scroll */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.logo-container {
+    margin-bottom: 0.5rem;
+    /* Reduced margin */
+    transition: all 0.4s ease;
+    overflow: hidden;
+    max-height: 180px;
+    /* Reduced max height constraint */
+    opacity: 1;
+}
+
+/* Hide Logo on Sticky */
+.header-container.sticky-header .logo-container {
+    margin-bottom: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.logo-container:hover {
+    transform: scale(1.02);
+}
+
+.header-logo {
+    width: 220px;
+    /* Reduced width */
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(186, 180, 162, 0.2));
+    /* Slight glow using secondary color */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.25rem;
+    /* Half of original 2.5rem to accommodate separators */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* Vertically center all items including the globe */
+}
+
+.desktop-nav-spacer {
+    display: none;
+}
+
+.nav-link {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    /* Start with white for contrast on black */
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-separator {
+    color: var(--color-secondary);
+    opacity: 0.3;
+    font-size: 0.6rem;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-secondary);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.nav-link.active {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        z-index: 101;
+        margin-left: auto;
+    }
+
+    .mobile-lang-wrapper {
+        transform: translateY(1px);
+    }
+
+    .hamburger-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+        z-index: 10002;
+        margin-right: -8px;
+        /* Offset padding for edge alignment */
+    }
+
+    .hamburger-line {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-btn.active .hamburger-line:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+
+    .hamburger-btn.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-btn.active .hamburger-line:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    .mobile-menu-overlay {
+        position: fixed;
+        /* top is set dynamically via inline style from headerRef */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        /* Remove 100dvh to prevent resize jumps */
+        background: rgba(11, 14, 26, 0.98);
+        backdrop-filter: blur(20px);
+        z-index: 10001;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 2rem 5rem;
+    }
+
+
+
+    .mobile-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .mobile-nav-link {
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav-num {
+        font-size: 0.7rem;
+        color: var(--color-secondary);
+        opacity: 0.5;
+        letter-spacing: 1px;
+    }
+
+    .mobile-nav-link.active {
+        color: var(--color-secondary);
+        padding-left: 1rem;
+    }
+
+    .mobile-menu-footer {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
+
+    .premium-label {
+        font-size: 0.7rem;
+        letter-spacing: 5px;
+        color: rgba(255, 255, 255, 0.2);
+        margin-bottom: 1rem;
+    }
+
+    .deco-line {
+        width: 40px;
+        height: 1px;
+        background: var(--color-secondary);
+        opacity: 0.3;
+    }
+
+    .header-logo {
+        width: 140px;
+    }
+
+    .logo-container {
+        margin-bottom: 0;
+        transform: none !important;
+        opacity: 1 !important;
+        max-height: 100px !important;
+    }
+
+    .header-container.sticky-header .logo-container {
+        transform: scale(0.9) !important;
+        opacity: 1 !important;
+    }
+
+    .header-content {
+        height: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.5rem;
+    }
+
+    .lang-switcher-item.desktop-only {
+        display: none;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .mobile-header-actions {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Desktop Horizontal Offset for Globe */
+@media (min-width: 769px) {
+    .header-content nav {
+        width: 100%;
+    }
+
+    .nav-menu {
+        width: 100%;
+        gap: 1.25rem;
+    }
+
+    .desktop-nav-spacer {
+        display: block;
+        flex: 1;
+    }
+
+    .lang-switcher-item {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 2rem;
+        /* Inward from right edge */
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-menu {
+        gap: 0.5rem 0.8rem;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+    }
+}
+
+.lang-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-globe-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(186, 180, 162, 0.8);
+    width: 32px;
+    /* Slightly smaller to match text height better */
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    padding: 0;
+    /* Removed margin-top for proper vertical centering */
+}
+
+.lang-globe-btn:hover,
+.lang-globe-btn.active {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+    box-shadow: 0 0 15px rgba(186, 180, 162, 0.2);
+}
+
+.lang-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 160px;
+    background: #1a1f33;
+    border: 1px solid rgba(186, 180, 162, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    backdrop-filter: blur(20px);
+}
+
+/* Arrow indicator on menu */
+.lang-dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    width: 10px;
+    height: 10px;
+    background: #1a1f33;
+    border-top: 1px solid rgba(186, 180, 162, 0.15);
+    border-left: 1px solid rgba(186, 180, 162, 0.15);
+    transform: rotate(45deg);
+}
+
+.lang-dropdown-header {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.25rem;
+}
+
+.lang-dropdown-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lang-dropdown-opt {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-dropdown-opt:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.lang-dropdown-opt.active {
+    color: var(--color-secondary);
+    background: rgba(186, 180, 162, 0.1);
+}
+
+@media (max-width: 768px) {
+    .lang-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        z-index: 10001;
+    }
+
+    /* Keep container relative so menu is positioned correctly */
+    .lang-dropdown-container {
+        position: relative;
+    }
+}

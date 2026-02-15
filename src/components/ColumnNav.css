@@ -1,0 +1,178 @@
+/* src/components/ColumnNav.css */
+.column-nav-section {
+    width: 100%;
+    padding: 4rem 5%;
+    /* var(--spacing-lg) is 4rem */
+    background-color: transparent;
+    /* Transparent to show shared gradient */
+    position: relative;
+    overflow: hidden;
+}
+
+.column-nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* Desktop layout: Side by side */
+@media (min-width: 768px) {
+    .column-nav-container {
+        flex-direction: row;
+        height: 60vh;
+        min-height: 500px;
+        max-height: 800px;
+        gap: 0;
+        align-items: stretch;
+    }
+}
+
+.nav-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    /* Subtle glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* GPU Acceleration Hints */
+    will-change: flex-grow;
+    transform: translateZ(0);
+    /* Force hardware acceleration layer */
+    transition: box-shadow 0.4s ease;
+}
+
+@media (min-width: 768px) {
+    .nav-card {
+        border-radius: 0;
+        /* Clean edges for sticking columns or slight radius */
+        border-radius: 8px;
+        /* Slight rounded for aesthetic separation */
+        margin: 0 10px;
+        /* Slight gap */
+    }
+}
+
+.nav-card:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-secondary);
+}
+
+.nav-content {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    /* Lock internal width to prevent reflow when parent shrinks */
+    min-width: 450px;
+}
+
+.nav-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    will-change: transform;
+    /* Optimize image scale animation */
+}
+
+/* Dark Overlay replaced with explicit div */
+.nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.7s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nav-card:hover .nav-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Typography & Layout */
+.nav-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: #fff;
+    /* Ensure title is white */
+    margin: 0;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-subtitle {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-description-text {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 350px;
+    margin: 0 auto;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile specific padding for description */
+@media (max-width: 767px) {
+    .nav-description-text {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Button */
+.nav-discover-btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    /* Backdrop-filter transition removed (handled in JS) */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+
+.nav-discover-btn:hover {
+    background: #fff;
+    color: var(--color-primary);
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

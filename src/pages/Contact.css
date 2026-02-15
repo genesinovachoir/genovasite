@@ -1,0 +1,513 @@
+/* ===========================================
+   CONTACT PAGE - Cinematic Concert Hall Aesthetic
+   Premium, Dark, Minimal, Trustworthy
+=========================================== */
+
+/* Page Container */
+.contact-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #05060a;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* ===========================================
+   Background Atmosphere
+   =========================================== */
+.contact-bg-container {
+    position: fixed;
+    /* Fixed so it doesn't scroll with content */
+    inset: 0;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contact-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+    /* Precisely adjusted for perfect framing */
+    filter: contrast(1.05);
+    /* Soft contrast without losing original blue tones */
+}
+
+.contact-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(5, 6, 10, 0.4) 0%,
+            rgba(5, 6, 10, 0.2) 20%,
+            rgba(5, 6, 10, 0.8) 100%);
+}
+
+.contact-bg-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 50%,
+            transparent 0%,
+            rgba(5, 6, 10, 0.4) 40%,
+            rgba(5, 6, 10, 0.9) 100%);
+}
+
+/* ===========================================
+   HERO SECTION - Full Screen Feel
+=========================================== */
+.contact-hero {
+    flex: 1;
+    /* Pushes footer down */
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Vertically center content */
+    justify-content: center;
+    padding: 200px 0 60px;
+    /* fit-to-fold spacing */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Background Atmosphere Removed */
+
+/* Content Grid */
+.contact-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 50/50 Split */
+    gap: 6rem;
+    width: 90%;
+    /* Inner width */
+    align-items: start;
+}
+
+/* ===========================================
+   LEFT COLUMN - Info & Vibes
+=========================================== */
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 0;
+}
+
+.contact-label {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    opacity: 0.8;
+    margin-left: 2px;
+}
+
+.contact-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 400;
+}
+
+.contact-description {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(236, 240, 241, 0.7);
+    max-width: 90%;
+    font-weight: 300;
+}
+
+/* Info Grid (2x2) */
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Shift second column (Location & Rehearsals) slightly to the right on desktop */
+@media (min-width: 901px) {
+    .contact-details-grid .detail-item:nth-child(even) {
+        padding-left: 2rem;
+    }
+}
+
+.detail-label.expand-trigger {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.expand-trigger:hover,
+.expand-trigger.active {
+    color: var(--color-secondary);
+}
+
+.expand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.expand-icon.open {
+    transform: rotate(180deg);
+}
+
+.phone-cards-container {
+    overflow: hidden;
+}
+
+.phone-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    padding-left: 0.25rem;
+}
+
+.person-mini-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.person-mini-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(186, 180, 162, 0.2);
+    transform: translateX(4px);
+}
+
+.person-avatar {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--color-secondary), #8c8675);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #05060a;
+    flex-shrink: 0;
+}
+
+.person-info-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.person-name {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.person-role {
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--color-secondary);
+    opacity: 0.8;
+}
+
+.person-phone {
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin-top: 0.2rem;
+    transition: color 0.3s ease;
+}
+
+.person-phone:hover {
+    color: #fff;
+}
+
+/* Social Row */
+.contact-social-row {
+    display: flex;
+    gap: 1.75rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.social-link-minimal {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    /* Brighter, more inviting base state */
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Smooth, musical easing */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link-minimal:hover {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.1);
+    /* Gentle lift & bloom */
+    /* Warm premium glow (Gold accent) */
+    filter: drop-shadow(0 0 10px rgba(186, 180, 162, 0.5));
+}
+
+.social-link-minimal:active {
+    transform: scale(0.94);
+    /* Tactile press feedback */
+    transition: all 0.1s ease-out;
+    filter: drop-shadow(0 0 2px rgba(186, 180, 162, 0.3));
+}
+
+.social-link-minimal img {
+    filter: brightness(0) invert(1);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===========================================
+   RIGHT COLUMN - Premium Form
+=========================================== */
+.contact-form-col {
+    position: relative;
+}
+
+/* Glass Card */
+.form-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 4px;
+    /* Slight rounding but clean lines */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.form-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Inputs */
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 0;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: #fff;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    border-radius: 0;
+    /* Clean lines */
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-secondary);
+    background: rgba(255, 255, 255, 0.02);
+    /* Subtle highlight */
+}
+
+.form-group:focus-within .form-label {
+    color: var(--color-secondary);
+}
+
+/* Validation Style */
+.form-input.error {
+    border-bottom-color: #e74c3c;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid rgba(186, 180, 162, 0.4);
+    color: var(--color-secondary);
+    padding: 1rem 2rem;
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    /* Left align button */
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: var(--color-secondary);
+    color: #05060a;
+    border-color: var(--color-secondary);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+/* Success State */
+.success-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.success-icon {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.success-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.success-desc {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+/* Tablet & Mobile Stack */
+@media (max-width: 900px) {
+
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .contact-hero {
+        padding: 160px 0 60px;
+    }
+
+
+
+    .form-card {
+        padding: 2rem;
+    }
+}
+
+/* Mobile Specific */
+@media (max-width: 600px) {
+    .contact-headline {
+        font-size: 2.5rem;
+    }
+
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+        background: transparent;
+        /* Cleaner on mobile */
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+    /* Re-add border to top/bottom or just keep it minimal */
+    .contact-form-col {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 3rem;
+    }
+
+
+
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

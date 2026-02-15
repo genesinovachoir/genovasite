@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.19 110.71">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        mix-blend-mode: luminosity;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g class="cls-3">
+          <path class="cls-2" d="M0,0h51.49v7.36H0V0ZM0,14.71h51.49v22.07H0v-7.36h44.14v-7.36H0v-7.36ZM0,51.49v-7.36h29.42v7.36H0Z"/>
+          <path class="cls-2" d="M110.34,51.49h-7.36V7.36h-36.78v44.14h-7.36V0h51.49v51.49ZM95.63,14.71v36.78h-7.36v-29.42h-7.36v29.42h-7.36V14.71h22.07Z"/>
+          <path class="cls-2" d="M139.77,29.42h29.42v22.07h-51.49V0h7.36v44.14h36.78v-7.36h-29.42V0h7.36v29.42Z"/>
+          <path class="cls-2" d="M22.07,59.22v51.49H0v-7.36h14.71v-36.78h-7.36v29.42H0v-36.78h22.07ZM51.49,96h-7.36v-29.42h-7.36v36.78h14.71v7.36h-22.07v-51.49h22.07v36.78Z"/>
+          <path class="cls-2" d="M110.34,66.57h-44.14v7.36h44.14v7.36h-51.49v-22.07h51.49v7.36ZM110.34,88.64v7.36h-44.14v7.36h44.14v7.36h-51.49v-22.07h51.49Z"/>
+          <path class="cls-2" d="M169.19,59.22v22.07h-51.49v-22.07h7.36v14.71h36.78v-7.36h-29.42v-7.36h36.78ZM147.12,88.64h22.07v22.07h-36.78v-14.71h-7.36v14.71h-7.36v-22.07h22.07v14.71h22.07v-7.36h-14.71v-7.36Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

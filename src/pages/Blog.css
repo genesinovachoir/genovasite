@@ -1,0 +1,866 @@
+/* Blog Page Styles - "Reader-Focused Minimalism" */
+
+/* Root Layout for Blog */
+/* Root Layout for Blog */
+/* Root Layout for Blog */
+.blog-page {
+    background-color: transparent;
+    /* Inherits body gradient */
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* =========================================
+   Intro Section (New)
+   ========================================= */
+.blog-intro-section {
+    height: 100vh;
+    min-height: 450px;
+    /* Minimum height for very small screens */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 180px 0 0;
+    /* Top padding for header */
+    overflow: hidden;
+}
+
+.blog-intro-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    position: relative;
+    z-index: 10;
+}
+
+.blog-eyebrow {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.blog-intro-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    /* Slightly smaller max than Collab due to length */
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin: 0;
+}
+
+.blog-intro-headline .italic {
+    font-style: italic;
+    color: var(--color-secondary);
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+.blog-intro-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.7rem 1.4rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.blog-intro-cta:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   Hero Section (Featured Post)
+   ========================================= */
+.blog-hero {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 4rem auto 6rem;
+    /* Reduced top margin since we have intro now */
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    text-decoration: none;
+    /* Clickable link */
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.blog-hero:hover {
+    transform: translateY(-2px);
+    /* Subtle lift on hover */
+}
+
+.blog-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.blog-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.blog-hero:hover .blog-hero-img {
+    transform: scale(1.04);
+    /* Subtle, editorial zoom */
+}
+
+.blog-hero-content {
+    padding-left: 2rem;
+}
+
+.blog-hero-meta {
+    display: flex;
+    gap: 1rem;
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.blog-hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.blog-hero:hover .blog-hero-title {
+    color: var(--color-secondary);
+    /* Subtle color shift on hover */
+}
+
+.blog-hero-excerpt {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    max-width: 95%;
+}
+
+.blog-hero-meta .read-time {
+    color: rgba(255, 255, 255, 0.5);
+    /* Lighter for subtle hierarchy */
+}
+
+.reading-time {
+    display: inline-block;
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   Filter / Navigation Bar
+   ========================================= */
+.blog-nav {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    margin-bottom: 4rem;
+    position: relative;
+    /* Changed from sticky to relative */
+    background: transparent;
+}
+
+.blog-nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-categories {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE/Edge */
+    padding-bottom: 2px;
+    /* Prevent scrollbar cutting outline */
+}
+
+.blog-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category-link {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    padding-bottom: 0.2rem;
+}
+
+.category-link.active,
+.category-link:hover {
+    color: var(--color-secondary);
+}
+
+.category-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-secondary);
+}
+
+/* =========================================
+   Blog Grid
+   ========================================= */
+.blog-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 Columns for density */
+    gap: 2.25rem;
+    /* Tighter, editorial rhythm */
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+}
+
+.blog-card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16/5.5;
+    /* Reduced vertical size - lighter, more compact */
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 0.9rem;
+    /* Tighter spacing */
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.03);
+    /* Reduced background weight */
+}
+
+.blog-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.blog-card:hover .blog-card-img {
+    transform: scale(1.04);
+    /* Subtle, editorial */
+}
+
+.blog-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.blog-card-meta {
+    font-size: 0.65rem;
+    /* Smaller for compactness */
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.6rem;
+    /* Tighter */
+    opacity: 0.72;
+    /* Lighter */
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.blog-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    /* Smaller for compactness */
+    line-height: 1.32;
+    /* Precise for 2-line allocation */
+    color: #fff;
+    margin-bottom: 0.65rem;
+    /* Reduced spacing */
+    transition: color 0.3s ease;
+    /* Fixed height allocation for grid alignment */
+    min-height: calc(1.25rem * 1.32 * 2);
+    /* Exactly 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-card:hover .blog-card-title {
+    color: var(--color-secondary);
+}
+
+.blog-card-excerpt {
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    /* Smaller for compactness */
+    line-height: 1.55;
+    /* Precise for 3-line allocation */
+    color: rgba(255, 255, 255, 0.52);
+    /* Lighter */
+    margin-bottom: 1rem;
+    /* Reduced */
+    /* Fixed height allocation for grid alignment */
+    min-height: calc(0.85rem * 1.55 * 3);
+    /* Exactly 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* =========================================
+   Author Metadata (Blog Cards)
+   ========================================= */
+.author-metadata {
+    margin-top: auto;
+    padding-top: 0.95rem;
+    /* Tighter for compactness */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Lighter divider */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+    /* Allow text truncation */
+}
+
+.author-avatar {
+    width: 30px;
+    /* Smaller for compact cards */
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    flex-shrink: 0;
+    opacity: 0.85;
+    /* Lighter */
+    transition: opacity 0.3s ease;
+}
+
+.blog-card:hover .author-avatar {
+    opacity: 1;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    /* Slightly more breathing room */
+    min-width: 0;
+}
+
+.author-name {
+    font-family: var(--font-primary);
+    font-size: 0.78rem;
+    /* Smaller for compact */
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    /* Lighter */
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-date {
+    font-family: var(--font-primary);
+    font-size: 0.65rem;
+    /* Smaller for compact */
+    color: rgba(255, 255, 255, 0.38);
+    /* Lighter */
+    letter-spacing: 0.02em;
+}
+
+.author-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Space for Follow label */
+    flex-shrink: 0;
+}
+
+.follow-label {
+    font-family: var(--font-primary);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    margin-right: 0.15rem;
+    /* Small gap before icons */
+}
+
+.social-link {
+    width: 18px;
+    /* Slightly larger for better visibility */
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.28;
+    /* Lighter default state */
+    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+}
+
+.social-link img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+    transition: filter 0.25s ease;
+}
+
+.social-link:hover {
+    opacity: 0.85;
+    /* Subtle hover */
+    transform: translateY(-1px);
+}
+
+.social-link:hover img {
+    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(20deg);
+}
+
+/* Ensure social links don't trigger card navigation */
+.social-link:active {
+    transform: translateY(0);
+}
+
+/* Featured Post Author Metadata - Refined to match blog cards */
+.featured-author-metadata {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    /* Slightly more visible than cards */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.featured-author-metadata .author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-author-metadata .author-avatar {
+    width: 38px;
+    /* Slightly larger for featured */
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    flex-shrink: 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.blog-hero:hover .featured-author-metadata .author-avatar {
+    opacity: 1;
+}
+
+.featured-author-metadata .author-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.18rem;
+    /* Slightly more breathing room */
+    min-width: 0;
+}
+
+.featured-author-metadata .author-name {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    /* Slightly larger for featured */
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.3;
+}
+
+.featured-author-metadata .post-date {
+    font-family: var(--font-primary);
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.42);
+    letter-spacing: 0.02em;
+}
+
+.featured-author-metadata .author-social {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    /* Space for Follow label */
+    flex-shrink: 0;
+}
+
+.featured-author-metadata .social-link {
+    width: 20px;
+    /* Slightly larger for better visibility */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.32;
+    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+}
+
+.featured-author-metadata .social-link img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+    transition: filter 0.25s ease;
+}
+
+.featured-author-metadata .social-link:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+.featured-author-metadata .social-link:hover img {
+    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(20deg);
+}
+
+/* Deprecated - old author block styles */
+.blog-hero .author-block {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* =========================================
+   Newsletter Section (In-Stream)
+   ========================================= */
+.blog-newsletter-section {
+    grid-column: 1 / -1;
+    /* Span full width */
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 4rem 0;
+    border-radius: 4px;
+}
+
+.blog-newsletter-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.blog-newsletter-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        /* Maintain editorial rhythm */
+    }
+
+    .blog-hero {
+        gap: 2rem;
+    }
+
+    .blog-hero-title {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet Optimization */
+@media (max-width: 900px) {
+    .blog-intro-section {
+        height: 100vh;
+        padding: 160px 0 0;
+        /* Adjusted for tablet header */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-page {
+        padding-top: 0;
+        /* Remove extra padding - hero handles its own */
+    }
+
+    .blog-intro-section {
+        height: 100vh;
+        min-height: 400px;
+        padding: 140px 0 0;
+        /* Reduced top padding for mobile header */
+    }
+
+    .blog-intro-content {
+        z-index: 10;
+        /* Ensure text is above background/overlays */
+        position: relative;
+    }
+
+    .blog-intro-headline {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    /* Mobile: Notebook group stays absolute but with adjusted positioning */
+    .notebook-group {
+        bottom: 6vh;
+        /* Slightly closer to bottom on mobile */
+    }
+
+    .blog-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .blog-hero-image-wrapper {
+        aspect-ratio: 16/9;
+    }
+
+    .blog-hero-content {
+        padding-left: 0;
+    }
+
+    .blog-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .blog-hero-excerpt {
+        font-size: 1rem;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+        /* Consistent rhythm on mobile */
+    }
+
+    .blog-nav {
+        /* Ensure it feels swipeable on mobile */
+        padding: 1rem 0;
+    }
+
+    .blog-nav-container {
+        width: 100%;
+        padding: 0 5%;
+        overflow-x: auto;
+    }
+
+    .blog-categories {
+        width: max-content;
+        gap: 1.5rem;
+    }
+
+    .blog-newsletter-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .blog-newsletter-title {
+        font-size: 1.8rem;
+    }
+
+    /* Author Metadata - Mobile Adjustments */
+    .author-metadata {
+        padding-top: 0.9rem;
+        /* Maintain compact spacing */
+    }
+
+    .author-avatar {
+        width: 28px;
+        /* Proportionally smaller on mobile */
+        height: 28px;
+        font-size: 0.6rem;
+    }
+
+    .author-name {
+        font-size: 0.75rem;
+    }
+
+    .post-date {
+        font-size: 0.63rem;
+    }
+
+    .social-link {
+        width: 16px;
+        /* Proportionally larger for visibility */
+        height: 16px;
+    }
+
+    /* Featured Author Metadata - Mobile */
+    .featured-author-metadata {
+        padding-top: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .featured-author-metadata .author-avatar {
+        width: 34px;
+        height: 34px;
+        font-size: 0.68rem;
+    }
+
+    .featured-author-metadata .author-name {
+        font-size: 0.85rem;
+    }
+
+    .featured-author-metadata .post-date {
+        font-size: 0.68rem;
+    }
+
+    .featured-author-metadata .social-link {
+        width: 18px;
+        /* Slightly larger for featured */
+        height: 18px;
+    }
+}
+
+/* Very Small Mobile Devices */
+@media (max-width: 400px) {
+    .blog-intro-section {
+        height: 100vh;
+        padding: 130px 0 0;
+        /* Further reduced for very small screens */
+    }
+
+    .blog-intro-content {
+        padding: 0 1rem;
+        /* Tighter horizontal padding */
+    }
+
+    .notebook-group {
+        bottom: 5vh;
+        /* Even closer on very small screens */
+    }
+}
+
+/* Notebook Group Styles */
+.notebook-group {
+    position: absolute;
+    bottom: 8vh;
+    /* Uses viewport height unit for responsiveness */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 20;
+    /* Ensure it's above other content */
+}
+
+.notebook-group:hover {
+    transform: translateX(-50%) translateY(-3px);
+    /* Gentle lift, not dramatic */
+}
+
+.notebook-group img {
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s ease;
+}
+
+.notebook-group:hover img {
+    opacity: 0.68;
+    /* Subtle increase - keeps translucent, refined feel */
+}
+
+.notebook-label {
+    font-family: var(--font-primary);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.notebook-group:hover .notebook-label {
+    color: rgba(255, 255, 255, 0.7);
+    /* Subtle brightening, not bold accent */
+}

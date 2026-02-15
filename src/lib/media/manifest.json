@@ -1,0 +1,47 @@
+{
+  "blog-hero": {
+    "id": "blog-hero",
+    "src": "/images/optimized/blog-hero-1024.webp",
+    "width": 1024,
+    "height": 1024,
+    "lastModified": 1768028263210.5906,
+    "variants": {
+      "webp": [
+        480,
+        768,
+        1024
+      ]
+    },
+    "blurDataURL": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCEAAAABHyAQSEMoQ2R3RMQBg2wjUZzZjffMfgIPENH/OHWfCwQAVlA4IHoAAACQBACdASoUABQAPzmUwFmvKiajqAgB4CcJZQDOOBEd3sHUmmangLaFnpHOGqAA/taXLrKzWsAXsRrX1VuH0Y3GsdQE2AiPS06cxEbekWc9ICQb43Kbs9Gpm8q4a7017Xmp6iGwH+zGb0mQQ+xKdQOZPKRwCl17pAAAAA=="
+  },
+  "choir-hero": {
+    "id": "choir-hero",
+    "src": "/images/optimized/choir-hero-1024.webp",
+    "width": 1024,
+    "height": 1024,
+    "lastModified": 1768028285002.5452,
+    "variants": {
+      "webp": [
+        480,
+        768,
+        1024
+      ]
+    },
+    "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCEAAAABHyAQSEMoQ2R3RMQBg2wjUZzZjffMfgIPENH/OHWfCwQAVlA4IFgAAABQBACdASoUABQAPzmOvVevKaYjqAqp4CcJZwDKtBEz3bVaGHZ0X7PbJ9EgAP7P1X4pI5PgSje+9aujvozhqWuoZNxt2L5LbEr0sJJ/gT38EBf+yFCJUAAA"
+  },
+  "podcast-hero": {
+    "id": "podcast-hero",
+    "src": "/images/optimized/podcast-hero-1024.webp",
+    "width": 1024,
+    "height": 1024,
+    "lastModified": 1768028285045.51,
+    "variants": {
+      "webp": [
+        480,
+        768,
+        1024
+      ]
+    },
+    "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCEAAAABHyAQSEMoQ2R3RMQBg2wjUZzZjffMfgIPENH/OHWfCwQAVlA4IEwAAACwAwCdASoUABQAPzmAuVSvJ6WjMBgMAeAnCWdqN1u9CnOXIIgseAD+6QwL8x+e2iE3ELFvdSTIyMS7Of7BGNQXHxg1h3s19d59rQAA"
+  }
+}

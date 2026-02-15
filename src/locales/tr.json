@@ -1,0 +1,257 @@
+{
+    "translation": {
+        "header": {
+            "home": "Anasayfa",
+            "about": "Hakkımızda",
+            "collab": "İŞBİRLİĞİ",
+            "media": "Medya",
+            "podcast": "Podcast",
+            "blog": "Blog",
+            "store": "Mağaza",
+            "contact": "İLETİŞİM"
+        },
+        "calendar": {
+            "eyebrow": "ETKİNLİK TAKVİMİ",
+            "season": "Sezon",
+            "details": "Detaylar",
+            "months": {
+                "Feb": "Şub",
+                "Mar": "Mar",
+                "Apr": "NİS",
+                "May": "May"
+            },
+            "types": {
+                "Selection": "Seçmeler",
+                "Concert": "Konser",
+                "Festival": "Festival"
+            },
+            "capacity_unit": "kişi"
+        },
+        "footer": {
+            "stay_close": "Takipte Kalmak İster Misin?",
+            "no_nuisance": "Merak etme, sürekli kendimizi hatırlatmayacağız…",
+            "full_name": "İsim Soyisim",
+            "email": "E-Posta",
+            "subscribe": "Takipte Kal",
+            "more_about": "Hakkımızda Fazlası",
+            "creative_works": "Yaratıcı Çalışmalar",
+            "about_us": "Hakkımızda",
+            "choir": "Koro",
+            "contact": "İletişim",
+            "collab": "İşbirliği",
+            "copyright_text": "Genesi Nova Korosu. Tüm hakları saklıdır.",
+            "success": {
+                "title": "Yolculuğa Hoş Geldin",
+                "message": "Artık listedesin. Yakında haberleşeceğiz."
+            }
+        },
+        "home": {
+            "hero": {
+                "title_part1": "GENESI NOVA",
+                "title_part2": "KOROSU",
+                "tagline1": "GENOVA SADECE BİR A CAPPELLA GRUBU DEĞİL,",
+                "tagline2": "YENİ BİR SES KÜLTÜRÜ İNŞA EDEN SESLER TOPLULUĞUDUR.",
+                "location": "Based in İstanbul"
+            },
+            "performance": {
+                "subtitle": "GENESI NOVA ORİJİNAL ARANJMANI",
+                "title": "Çanakkale Türküsü",
+                "quote": "Bir ağıt, bir hatıra, bir sessizlik anı.",
+                "description": "‘Çanakkale Türküsü’, şehitlerimizi anmak adına Genesi Nova tarafından yeniden yorumlandı."
+            },
+            "cta": {
+                "title": "Yeni bir şeyler inşa ediyoruz.",
+                "subtitle": "YOLCULUĞUN PARÇASI OL"
+            }
+        },
+        "collab": {
+            "hero": {
+                "eyebrow": "İŞBİRLİĞİ",
+                "headline": "Seslerin buluştuğu,<br /><span>fikirlerin kesiştiği yer.</span>",
+                "subtext": "Burası ortak ritüeller için oluşturduğumuz bir alan. Sanatçıların, toplulukların ve fikirlerin bir araya gelerek alışılmışın ötesinde bir şey ürettiği ortak bir buluşma noktası.",
+                "cta": "Birlikte Üretelim"
+            },
+            "showcase": {
+                "title": "Holyween",
+                "venue": "En Passant, Beyoğlu",
+                "lead": "Genesi Nova, Şalter ile birlikte En Passant’ı kalbi atan bir ses yuvasına dönüştürdü.",
+                "body": "Sahneye dönüştürdüğümüz bu kilisede, sesler türlerin ötesine taşarak ritüel, mevcudiyet ve birlikte dinleme etrafında şekillenen bir gece yarattı.",
+                "hint": "İki perspektif. Tek gece. Logolara tıkla."
+            },
+            "form": {
+                "title": "Yola çıkalım",
+                "subtitle": "Anlamlı yerlere varan her sohbete açığız.",
+                "options": {
+                    "invite": "Bizi mevcut bir projeye davet edin",
+                    "create": "Birlikte yeni bir proje üretelim",
+                    "sponsor": "Çalışmalarımıza destek olun"
+                },
+                "placeholders": {
+                    "invite": "Projeden ve bizim nasıl bir katkı sağlayabileceğimizden bahsedin...",
+                    "create": "Bizimle nasıl bir vizyon inşa etmek istersiniz?",
+                    "sponsor": "Yolculuğumuzu nasıl desteklemek istersiniz?",
+                    "default": "Devam etmek için yukarıdan bir seçenek belirleyin..."
+                },
+                "labels": {
+                    "name": "İsim veya Kurum",
+                    "email": "E-posta",
+                    "message": "Mesajınız"
+                },
+                "submit": "Teklif gönder",
+                "success": {
+                    "title": "Ulaştığınız için teşekkürler",
+                    "message": "Teklifinizi aldık, en kısa sürede sizinle iletişime geçeceğiz.<br />Birlikte anlamlı işler üretmek dileğiyle."
+                }
+            }
+        },
+        "podcast": {
+            "badge": "Çok Yakında",
+            "headline": {
+                "main": "Genova Podcast",
+                "accent": "Çok Yakında"
+            },
+            "subtext": {
+                "line1": "Her şeyin merkezinde müziğin olduğu hikayeler.",
+                "line2": "Yayınladığımızda ilk senin haberin olsun."
+            },
+            "platforms_label": "Şuralarda BİR yerlerde",
+            "cta": {
+                "placeholder": "E-posta adresinizi girin",
+                "button": "Haberdar Et",
+                "helper": "Bekleme listesine katılın • Asla spam yok",
+                "success": "Kaydın alındı! Gelişmelerden haberdar olacaksın."
+            }
+        },
+        "store": {
+            "header": {
+                "subtitle": "Mahzen",
+                "title": "MAĞAZA"
+            },
+            "items": {
+                "kirmizi": {
+                    "subtitle": "Genesi Nova ORİJİNAL Aranjmanı",
+                    "title": "Kırmızı",
+                    "desc": "Bir zamanların pop şarkısı, cazla yeniden doğuyor. “Kırmızı”, Genesi Nova düzenlemesinde ritmini dönüştürüyor, duygusunu derinleştiriyor."
+                },
+                "canakkale": {
+                    "subtitle": "GENESI NOVA ORİJİNAL ARANJMANI",
+                    "title": "Çanakkale Türküsü",
+                    "desc": "Bir ağıt, bir hatıra, bir sessizlik anı.\n‘Çanakkale Türküsü’, şehitlerimizi anmak adına Genesi Nova tarafından yeniden yorumlandı."
+                },
+                "amasya": {
+                    "subtitle": "Genesi Nova ORİJİNAL Aranjmanı",
+                    "title": "Nasip Olur Amasya’ya Varırsan",
+                    "desc": "Yolculuk, kader ve özlemle şekillenmiş bir halk türküsü. “Nasip Olur Amasya’ya Varırsan”, Genesi Nova’nın yorumu ile zamansız bir sese dönüşüyor."
+                }
+            },
+            "footer": {
+                "status": "Notalar yazıldı. Kayıtlar hazır.",
+                "opening": "Mahzen Yakında Kapılarını Açıyor"
+            }
+        },
+        "media": {
+            "hero": {
+                "eyebrow": "VİTRİN",
+                "headline": "Medya",
+                "subtitle": "Sesin, anda olmanın ve paylaşılan deneyimlerin yaşayan bir arşivi."
+            },
+            "events": {
+                "holyween": {
+                    "title": "Holyween",
+                    "category": "Performans",
+                    "date": "01 Kas 2025",
+                    "description": "“Genesi Nova, Şalter ile birlikte En Passant’ı yaşayan bir ses yuvasına dönüştürdü. Bir kilisenin sahneye evrildiği bu gecede, sesler tür tanımlarını geride bıraktı.”",
+                    "link": "Detayları Görüntüle",
+                    "link_instagram": "İnstagram'da Görüntüle"
+                },
+                "workshop": {
+                    "title": "Açık Prova: Vocal Painting Atölyesi",
+                    "category": "Workshop",
+                    "date": "28 Haz 2025",
+                    "description": "“Vocal painting atölyemiz, mini konserin enerjisiyle birleşti. Katılımcılar, seslerin hâlâ şekillenmekte olduğu anlara tanıklık ederken, müzikle etkileşimde bulunmanın eşsiz deneyimini yaşadı.”",
+                    "link": "Detayları Görüntüle"
+                }
+            },
+            "view_event": "GÖRÜNTÜLE"
+        },
+        "contact": {
+            "label": "İLETİŞİM",
+            "headline": "İletişimde Kal!",
+            "description": "“Konser, atölye, işbirliği ya da sadece bir merhaba… bize yazman yeterli.”",
+            "details": {
+                "email": "E-Posta",
+                "location": "Konum",
+                "phone": "Telefon",
+                "rehearsals": "Provalar",
+                "location_value": "İstanbul, Türkiye",
+                "rehearsal_days": "Salı & Cuma",
+                "persons": {
+                    "chef": "ŞEF",
+                    "marketing": "PAZARLAMA & SOSYAL MEDYA SORUMLUSU",
+                    "communication": "İLETİŞİM SORUMLUSU"
+                }
+            },
+            "form": {
+                "fullname": "ŞAHIS/ORGANİZASYON İSMİNİZ",
+                "email": "E-POSTA ADRESİNİZ",
+                "subject": "MESAJ KONUNUZ (OPSİYONEL)",
+                "message": "MESAJINIZ",
+                "placeholder_name": "Mehmet Arslan",
+                "placeholder_email": "marslan@ornek.com",
+                "placeholder_subject": "Konser Planlaması",
+                "placeholder_message": "Bize aklında ne olduğunu anlat…",
+                "submit": "Gönder",
+                "sending": "Gönderiliyor...",
+                "success": {
+                    "title": "Mesajın Gönderildi",
+                    "desc": "Mesajınız için teşekkürler! En kısa sürede dönüş yapacağız.",
+                    "another": "Başka BİR Mesaj Gönder"
+                },
+                "errors": {
+                    "name": "İsim gereklidir",
+                    "email_required": "E-posta gereklidir",
+                    "email_invalid": "Lütfen geçerli bir e-posta girin",
+                    "message": "Mesaj gereklidir"
+                }
+            }
+        },
+        "about": {
+            "heroTitle": "Biz Kimiz?",
+            "whoWeAre": {
+                "label": "KİMLİĞİMİZ",
+                "title": "Seslerden Doğan Bir Topluluk",
+                "body": "Genesi Nova, 2024 yılında İstanbul'da kurulan bağımsız bir a cappella korosudur. Farklı yaşam deneyimlerine sahip sesler, ortak bir müzikal vizyon etrafında bir araya gelir."
+            },
+            "philosophy": {
+                "label": "FELSEFE",
+                "title": "Müzik, Ritüel ve Bağ",
+                "body": "Sahne almak bizim için bir performans değil, bir ritüeldir. Her prova, her konser; dinleyiciyle aramızda kurulan sessiz bir sözleşmedir."
+            },
+            "approach": {
+                "label": "YAKLAŞIM",
+                "title": "Türler Ötesi Ses Mimarisi",
+                "body": "Türk halk müziğinden çağdaş aranjmanlara, cazdan deneysel vokale uzanan bir yelpazede, seslerin sınırlarını yeniden çiziyoruz."
+            },
+            "collective": {
+                "label": "KOLEKTİF",
+                "title": "Bireyler Değil, Bir Ses",
+                "body": "Her birimiz farklı bir renk taşır. Ama sahneye çıktığımızda, bu renkler tek bir sese dönüşür — Genesi Nova'nın sesi."
+            }
+        },
+        "aboutIntro": {
+            "step1": "Hepimiz",
+            "step2": "her birimiziz.",
+            "step3": "Hiç birimiz,",
+            "step4": "bir kişi degiliz.",
+            "step5": "Birlikte,",
+            "step6": "seslerimizle,",
+            "step7": "bir oluyoruz,",
+            "step8": "birlik oluyoruz.",
+            "step9": "Birlikteyken sesimiz,",
+            "step10": "çok daha güzel çıkıyor.",
+            "play": "Hikayeyi Başlat",
+            "skip": "Atla",
+            "replay": "Hikayeyi Tekrar İzle"
+        }
+    }
+}

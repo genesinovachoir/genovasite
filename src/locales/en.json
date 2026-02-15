@@ -1,0 +1,256 @@
+{
+    "translation": {
+        "header": {
+            "home": "Home",
+            "about": "About",
+            "collab": "Collab",
+            "media": "Media",
+            "podcast": "Podcast",
+            "blog": "Blog",
+            "store": "Store",
+            "contact": "Contact"
+        },
+        "calendar": {
+            "eyebrow": "Event Calendar",
+            "season": "Season",
+            "details": "Details",
+            "months": {
+                "Feb": "Feb",
+                "Mar": "Mar",
+                "Apr": "Apr",
+                "May": "May"
+            },
+            "types": {
+                "Selection": "Selection",
+                "Concert": "Concert",
+                "Festival": "Festival"
+            },
+            "capacity_unit": "people"
+        },
+        "footer": {
+            "stay_close": "Let’s stay close.",
+            "no_nuisance": "No worries, we promise not to be a nuisance.",
+            "full_name": "Full Name",
+            "email": "Email Address",
+            "subscribe": "Subscribe",
+            "more_about": "More About Us",
+            "creative_works": "Creative Works",
+            "about_us": "About Us",
+            "choir": "Choir",
+            "contact": "Contact",
+            "collab": "Collab",
+            "copyright_text": "Genesi Nova Choir. All rights reserved.",
+            "success": {
+                "title": "Welcome to the Journey",
+                "message": "You're now on the list. We'll be in touch soon."
+            }
+        },
+        "home": {
+            "hero": {
+                "title_part1": "GENESI NOVA",
+                "title_part2": "CHOIR",
+                "tagline1": "This is not just an a cappella group.",
+                "tagline2": "It's a collective of voices, shaping a new sound culture.",
+                "location": "Based in İstanbul"
+            },
+            "performance": {
+                "subtitle": "Genesi Nova Original Arrangement",
+                "title": "Çanakkale Türküsü",
+                "quote": "A lament, a memory, a moment of silence.",
+                "description": "'Çanakkale Türküsü' is reinterpreted by Genesi Nova in remembrance of the fallen."
+            },
+            "cta": {
+                "title": "We're building something new.",
+                "subtitle": "Be part of the journey."
+            }
+        },
+        "collab": {
+            "hero": {
+                "eyebrow": "Collaboration",
+                "headline": "Where voices meet,<br /><span>ideas intersect.</span>",
+                "subtext": "This is a space for shared rituals — where artists, institutions, and ideas come together to create something beyond the expected.",
+                "cta": "Collaborate"
+            },
+            "showcase": {
+                "title": "Holyween",
+                "venue": "En Passant, Beyoğlu",
+                "lead": "Together with Şalter, Genesi Nova transformed En Passant into a living soundscape.",
+                "body": "In a church-turned-stage, voices echoed beyond genre, creating a night shaped by ritual, presence, and shared listening.",
+                "hint": "Two perspectives. One night. Click the logos."
+            },
+            "form": {
+                "title": "Collaborate with us",
+                "subtitle": "We’re open to conversations that lead somewhere meaningful.",
+                "options": {
+                    "invite": "Invite us to an existing project",
+                    "create": "Create a project together",
+                    "sponsor": "Sponsor our work"
+                },
+                "placeholders": {
+                    "invite": "Tell us about the project and how we might contribute...",
+                    "create": "What kind of vision do you want to build with us?",
+                    "sponsor": "How would you like to support our journey?",
+                    "default": "Select an option above to continue..."
+                },
+                "labels": {
+                    "name": "Name or Organization",
+                    "email": "Email",
+                    "message": "Your message"
+                },
+                "submit": "Send proposal",
+                "success": {
+                    "title": "Thank you for reaching out",
+                    "message": "We've received your proposal and will be in touch soon.<br />Looking forward to creating something meaningful together."
+                }
+            }
+        },
+        "podcast": {
+            "badge": "Coming Soon",
+            "headline": {
+                "main": "Genova Podcast",
+                "accent": "Coming Soon"
+            },
+            "subtext": {
+                "line1": "Stories, ideas, and conversations where music becomes the center of everything.",
+                "line2": "Be the first to know when we launch."
+            },
+            "platforms_label": "Available on",
+            "cta": {
+                "placeholder": "Enter your email",
+                "button": "Notify Me",
+                "helper": "Join the waitlist • No spam, ever",
+                "success": "All set! We'll keep you posted."
+            }
+        },
+        "store": {
+            "header": {
+                "subtitle": "The Vault",
+                "title": "Upcoming Arrangements"
+            },
+            "items": {
+                "kirmizi": {
+                    "subtitle": "Genesi Nova Original Arrangement",
+                    "title": "Kırmızı",
+                    "desc": "Once a pop song, now reborn through jazz. \"Kırmızı\" shifts its rhythm and deepens its emotion in a Genesi Nova arrangement."
+                },
+                "canakkale": {
+                    "subtitle": "Genesi Nova Original Arrangement",
+                    "title": "Çanakkale Türküsü",
+                    "desc": "A lament, a memory, a moment of silence. \"Çanakkale Türküsü\" is reinterpreted by Genesi Nova in remembrance of the fallen."
+                },
+                "amasya": {
+                    "subtitle": "Genesi Nova Original Arrangement",
+                    "title": "Nasip Olur Amasya'ya Varırsan",
+                    "desc": "A folk song shaped by journey, fate, and longing. \"Nasip Olur Amasya'ya Varırsan\" becomes a timeless voice through Genesi Nova's interpretation."
+                }
+            },
+            "footer": {
+                "status": "The score is written. The recording is set.",
+                "opening": "The Vault Opens Soon"
+            }
+        },
+        "media": {
+            "hero": {
+                "eyebrow": "The Showcase",
+                "headline": "Media",
+                "subtitle": "A living archive of voice, presence, and shared moments."
+            },
+            "events": {
+                "holyween": {
+                    "title": "Holyween",
+                    "category": "Performances",
+                    "date": "Nov 01, 2025",
+                    "description": "Together with Şalter, Genesi Nova transformed En Passant into a living soundscape. In a church-turned-stage, voices echoed beyond genre, creating a night shaped by ritual, presence, and shared listening.",
+                    "link": "View Collab"
+                },
+                "workshop": {
+                    "title": "Açık Prova: Vocal Painting Workshop",
+                    "category": "Workshop",
+                    "date": "Jun 28, 2025",
+                    "description": "Our vocal painting workshop merged with the energy of a mini concert. As the participants witnessed sounds still taking shape, they experienced the unique feeling of interacting with music in real time.",
+                    "link": "View Details"
+                }
+            },
+            "view_event": "View Event"
+        },
+        "contact": {
+            "label": "Contact",
+            "headline": "Let's get in touch!",
+            "description": "Whether it's a concert inquiry, a workshop collaboration, or just a note to say hello — we'd love to hear from you.",
+            "details": {
+                "email": "Email",
+                "location": "Location",
+                "phone": "Phone",
+                "rehearsals": "Rehearsals",
+                "location_value": "Istanbul, Turkey",
+                "rehearsal_days": "Tuesday & Friday",
+                "persons": {
+                    "chef": "CONDUCTOR",
+                    "marketing": "MARKETING & SOCIAL MEDIA COORDINATOR",
+                    "communication": "COMMUNICATION COORDINATOR"
+                }
+            },
+            "form": {
+                "fullname": "Full Name",
+                "email": "Email Address",
+                "subject": "Subject (Optional)",
+                "message": "Message",
+                "placeholder_name": "Jane Doe",
+                "placeholder_email": "jane@example.com",
+                "placeholder_subject": "Concert Inquiry",
+                "placeholder_message": "Tell us what's on your mind...",
+                "submit": "Send Message",
+                "sending": "Sending...",
+                "success": {
+                    "title": "Message Sent",
+                    "desc": "Thank you for reaching out. We'll be in touch shortly.",
+                    "another": "Send Another"
+                },
+                "errors": {
+                    "name": "Name is required",
+                    "email_required": "Email is required",
+                    "email_invalid": "Please enter a valid email",
+                    "message": "Message is required"
+                }
+            }
+        },
+        "about": {
+            "heroTitle": "Who Are We?",
+            "whoWeAre": {
+                "label": "IDENTITY",
+                "title": "A Collective Born from Voices",
+                "body": "Genesi Nova is an independent a cappella choir founded in Istanbul in 2024. Voices from diverse backgrounds unite around a shared musical vision."
+            },
+            "philosophy": {
+                "label": "PHILOSOPHY",
+                "title": "Music, Ritual and Connection",
+                "body": "Performing is not a show for us — it's a ritual. Every rehearsal, every concert is a silent contract between us and the listener."
+            },
+            "approach": {
+                "label": "APPROACH",
+                "title": "Sound Architecture Beyond Genres",
+                "body": "From Turkish folk music to contemporary arrangements, from jazz to experimental vocal — we redraw the boundaries of what voices can do."
+            },
+            "collective": {
+                "label": "COLLECTIVE",
+                "title": "Not Individuals, One Voice",
+                "body": "Each of us carries a different color. But when we step on stage, those colors merge into a single sound — the voice of Genesi Nova."
+            }
+        },
+        "aboutIntro": {
+            "step1": "We are all",
+            "step2": "each one of us.",
+            "step3": "None of us,",
+            "step4": "is just one person.",
+            "step5": "Together,",
+            "step6": "with our voices,",
+            "step7": "we become one,",
+            "step8": "we become a union.",
+            "step9": "When we are together,",
+            "step10": "our voice is more beautiful.",
+            "play": "Start Story",
+            "skip": "Skip",
+            "replay": "Watch Again"
+        }
+    }
+}

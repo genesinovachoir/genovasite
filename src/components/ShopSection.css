@@ -1,0 +1,235 @@
+/* Shop Section - The Vault Grid */
+.shop-section {
+    position: relative;
+    width: 100%;
+    padding-bottom: 6rem;
+    overflow: hidden;
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    /* Compact header spacing */
+    padding-top: 2rem;
+}
+
+.shop-subtitle {
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.shop-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    /* Compact but breathing */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Card Structure */
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Image Wrapper */
+.card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 3/4;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: #0b0d17;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* LOCKED IMAGE STYLE - IP PROTECTION */
+.card-img-locked {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Permanent strong blur - unreadable */
+    filter: blur(25px) brightness(0.6) grayscale(100%);
+    opacity: 0.8;
+    transform: scale(1.1);
+    /* Zoom in to blur edges */
+    pointer-events: none;
+    /* No interaction */
+    user-select: none;
+    transition: transform 0.8s ease;
+}
+
+/* On hover, image moves slightly but NEVER reveals */
+.gallery-card:hover .card-img-locked {
+    transform: scale(1.05);
+    /* Subtle breathe */
+}
+
+/* Locked Overlay */
+.locked-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    z-index: 2;
+}
+
+.lock-badge {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.gallery-card:hover .lock-badge {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-secondary);
+}
+
+.lock-icon {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* Typography Content */
+.card-content {
+    text-align: center;
+}
+
+.card-subtitle {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+/* HOVER REVEAL EFFECT */
+.hover-reveal-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    /* More space around text */
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(11, 13, 23, 0.85), rgba(5, 6, 10, 0.95));
+    /* Deep vignette */
+    opacity: 0;
+    transition: all 1s ease-out;
+    /* Slower background fade */
+    z-index: 5;
+    backdrop-filter: blur(8px);
+    /* Stronger blur for canvas effect */
+}
+
+/* Beautiful Italic Typography */
+.reveal-text {
+    font-family: var(--font-heading);
+    /* Playfair Display - Consistent & Elegant */
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 400;
+    font-style: italic;
+    transform: translateY(30px);
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.2s ease;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    max-width: 90%;
+    letter-spacing: 0.02em;
+}
+
+/* Interaction: Reveal on Hover */
+.gallery-card:hover .hover-reveal-content {
+    opacity: 1;
+}
+
+.gallery-card:hover .reveal-text {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.15s;
+}
+
+/* Hide Lock on Hover to clear stage for text */
+.gallery-card:hover .lock-badge {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.shop-footer {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.footer-line {
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--color-secondary), transparent);
+    margin: 0 auto 1.5rem auto;
+}
+
+.footer-text {
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon-glow {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 3rem;
+    }
+}

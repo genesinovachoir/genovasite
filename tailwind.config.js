@@ -1,0 +1,1 @@
+export default { content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'], theme: { extend: { fontFamily: { sans: ['Montserrat', 'sans-serif'], serif: ['Playfair Display', 'serif'], }, colors: { primary: '#282e50', secondary: '#bab4a2', background: '#05060a', }, }, }, plugins: [], };

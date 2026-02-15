@@ -1,0 +1,763 @@
+/* ===========================================
+   PODCAST PAGE - Intelligent Layout
+   Clean, Premium, 60 FPS
+=========================================== */
+
+/* Page Container - Full Viewport Hero */
+.podcast-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-primary);
+}
+
+/* ===========================================
+   HERO SECTION - Single Container
+=========================================== */
+.podcast-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Navbar safe area - elegant spacing */
+    padding: max(160px, 12vh) 24px 80px;
+}
+
+/* ===========================================
+   BACKGROUND - Static, No Animations
+=========================================== */
+.podcast-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.podcast-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            #0a0c14 0%,
+            #05060a 40%,
+            #080a12 100%);
+}
+
+.podcast-bg-radial {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 30%,
+            rgba(40, 46, 80, 0.25) 0%,
+            transparent 60%);
+}
+
+/* ===========================================
+   SOUNDWAVE - Single SVG, Subtle Animation
+=========================================== */
+.podcast-soundwave {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.soundwave-img {
+    width: 140%;
+    max-width: 1800px;
+    height: auto;
+    opacity: 0.1;
+    transform: translateZ(0);
+    animation: soundwaveFloat 12s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes soundwaveFloat {
+
+    0%,
+    100% {
+        transform: translateX(0) translateZ(0);
+    }
+
+    50% {
+        transform: translateX(15px) translateZ(0);
+    }
+}
+
+/* ===========================================
+   MAIN CENTERED CONTENT
+=========================================== */
+.podcast-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 24px;
+}
+
+/* ===========================================
+   BADGE - Clean & Minimal
+=========================================== */
+.podcast-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    border: 1px solid rgba(186, 180, 162, 0.25);
+    background: rgba(186, 180, 162, 0.06);
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #bab4a2;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.badge-text {
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    opacity: 0.9;
+}
+
+/* ===========================================
+   HEADLINE - Optimized Scale
+=========================================== */
+.podcast-headline {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.headline-main {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: #fff;
+}
+
+.headline-accent {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: var(--color-secondary);
+}
+
+/* ===========================================
+   SUBTEXT - Compact
+=========================================== */
+.podcast-subtext {
+    font-family: var(--font-primary);
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 520px;
+    margin-bottom: 24px;
+}
+
+/* ===========================================
+   HERO VISUALS - Reduced Size
+=========================================== */
+.podcast-hero-visuals {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    height: 180px;
+    margin-bottom: 0;
+}
+
+.hero-visual {
+    position: absolute;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Headphones - Left */
+.hero-headphones {
+    left: 5%;
+    width: 42%;
+    z-index: 1;
+    animation: floatLeft 8s ease-in-out infinite;
+}
+
+/* Mic - Right */
+.hero-mic {
+    right: 5%;
+    width: 38%;
+    z-index: 2;
+    animation: floatRight 8s ease-in-out infinite;
+    animation-delay: -2s;
+}
+
+@keyframes floatLeft {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg) translateZ(0);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-3deg) translateZ(0);
+    }
+}
+
+@keyframes floatRight {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(5deg) translateZ(0);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(7deg) translateZ(0);
+    }
+}
+
+/* ===========================================
+   CORNER ELEMENTS - Absolute within Hero
+=========================================== */
+
+/* Bottom-Right Corner: Email CTA */
+.podcast-cta--corner {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+    width: auto;
+    max-width: 380px;
+}
+
+/* Bottom-Left Corner: Platform Icons */
+.podcast-platforms--corner {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+/* ===========================================
+   CTA SECTION - Compact Corner Style
+=========================================== */
+.podcast-cta {
+    width: 100%;
+}
+
+.cta-form {
+    width: 100%;
+}
+
+.cta-input-wrapper {
+    display: flex;
+    gap: 0;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.cta-input-wrapper:focus-within {
+    border-color: rgba(186, 180, 162, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.cta-input-wrapper.error {
+    border-color: rgba(255, 80, 80, 0.6);
+    background: rgba(255, 80, 80, 0.05);
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+.cta-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: #fff;
+    outline: none;
+}
+
+.cta-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #bab4a2 0%, #9a9486 100%);
+    font-family: var(--font-primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #05060a;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.cta-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.cta-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.cta-button:disabled {
+    cursor: default;
+}
+
+
+
+.cta-icon-arrow,
+.cta-icon-check {
+    width: 16px;
+    height: 16px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cta-helper {
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+}
+
+/* Success State */
+.cta-success-message {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(75, 181, 67, 0.3);
+    background: rgba(75, 181, 67, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 54px; /* Matches input wrapper height */
+}
+
+.success-icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #4bb543;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 2px 10px rgba(75, 181, 67, 0.3);
+}
+
+.success-text {
+    font-family: var(--font-primary);
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.01em;
+    padding-right: 12px;
+}
+
+/* Loader */
+.cta-loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(5, 6, 10, 0.2);
+    border-top-color: #05060a;
+    border-radius: 50%;
+    display: block;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===========================================
+   PLATFORMS - Compact Corner Style
+=========================================== */
+.podcast-platforms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.platforms-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.platforms-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.platform-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+}
+
+.platform-icon:hover {
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.platform-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* ===========================================
+   RESPONSIVE - Tablet
+=========================================== */
+@media (max-width: 1024px) {
+    .podcast-hero {
+        padding: max(150px, 10vh) 20px 60px;
+    }
+
+    .headline-main {
+        font-size: clamp(2.25rem, 5.5vw, 4rem);
+    }
+
+    .podcast-hero-visuals {
+        max-width: 400px;
+        height: 160px;
+    }
+
+    .podcast-cta--corner {
+        bottom: 30px;
+        right: 30px;
+        max-width: 340px;
+    }
+
+    .podcast-platforms--corner {
+        bottom: 30px;
+        left: 30px;
+    }
+}
+
+/* ===========================================
+   RESPONSIVE - Mobile
+=========================================== */
+@media (max-width: 768px) {
+    .podcast-page {
+        min-height: auto;
+    }
+
+    .podcast-hero {
+        min-height: 100vh;
+        padding: 140px 20px 60px;
+        justify-content: flex-start;
+    }
+
+    .podcast-content {
+        padding: 0 16px;
+        margin-bottom: 40px;
+    }
+
+    .podcast-badge {
+        margin-bottom: 20px;
+        padding: 7px 16px;
+    }
+
+    .badge-text {
+        font-size: 10px;
+    }
+
+    .headline-main {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+
+    .headline-accent {
+        font-size: clamp(1.1rem, 5vw, 1.6rem);
+    }
+
+    .podcast-subtext {
+        font-size: 14px;
+        margin-bottom: 28px;
+        padding: 0 8px;
+    }
+
+    .podcast-hero-visuals {
+        height: 160px;
+        max-width: 320px;
+        margin-bottom: 32px;
+    }
+
+    .hero-headphones {
+        width: 48%;
+        left: 0;
+    }
+
+    .hero-mic {
+        width: 44%;
+        right: 0;
+    }
+
+    /* Mobile: Stack layout - relative positioning */
+    .podcast-cta--corner {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        max-width: 320px;
+        width: 85%;
+        margin: 40px auto 48px;
+    }
+
+    .podcast-platforms--corner {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        align-items: center;
+        margin: 24px auto 0;
+    }
+
+    .cta-input-wrapper {
+        flex-direction: column;
+        border-radius: 16px;
+        padding: 3px;
+    }
+
+    .cta-input {
+        padding: 10px 14px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 13px;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 13px;
+    }
+
+    .platform-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .platform-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .soundwave-img {
+        width: 200%;
+        opacity: 0.08;
+    }
+
+    .cta-helper {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .platforms-label {
+        font-size: 10px;
+    }
+}
+
+/* ===========================================
+   RESPONSIVE - Small Mobile
+=========================================== */
+@media (max-width: 480px) {
+    .podcast-hero {
+        padding: 130px 16px 50px;
+    }
+
+    .headline-main {
+        font-size: clamp(1.75rem, 11vw, 3rem);
+    }
+
+    .podcast-hero-visuals {
+        height: 140px;
+        max-width: 280px;
+    }
+
+    .cta-helper {
+        font-size: 10px;
+    }
+
+    .platforms-label {
+        font-size: 10px;
+    }
+}
+
+/* ===========================================
+   DESKTOP MICRO ADJUSTMENTS - Above the Fold
+   (769px - 1199px: Standard desktop viewports)
+=========================================== */
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    /* Slightly reduce headline scale */
+    .headline-main {
+        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        line-height: 1.0;
+    }
+
+    .headline-accent {
+        font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+    }
+
+    /* Reduce badge spacing */
+    .podcast-badge {
+        margin-bottom: 14px;
+        padding: 7px 16px;
+    }
+
+    /* Tighten headline spacing */
+    .podcast-headline {
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+    /* Reduce subtext size and spacing */
+    .podcast-subtext {
+        font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    /* Scale down hero visuals (mic + headphones) */
+    .podcast-hero-visuals {
+        max-width: 360px;
+        height: 145px;
+        margin-bottom: 0;
+    }
+
+    /* Move corner blocks UP to fit above fold */
+    .podcast-cta--corner {
+        bottom: 50px;
+    }
+
+    .podcast-platforms--corner {
+        bottom: 50px;
+    }
+}
+
+/* ===========================================
+   RESPONSIVE - Large Screens
+=========================================== */
+@media (min-width: 1200px) {
+    .podcast-hero {
+        padding: max(170px, 14vh) 48px 100px;
+    }
+
+    .podcast-hero-visuals {
+        max-width: 500px;
+        height: 200px;
+    }
+
+    .podcast-cta--corner {
+        max-width: 420px;
+        bottom: 60px;
+    }
+
+    .podcast-platforms--corner {
+        bottom: 60px;
+    }
+}
+
+/* ===========================================
+   REDUCED MOTION - Accessibility
+=========================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    .soundwave-img,
+    .hero-headphones,
+    .hero-mic,
+    .badge-dot {
+        animation: none;
+    }
+}

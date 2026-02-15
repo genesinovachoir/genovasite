@@ -1,0 +1,151 @@
+/* Main Container */
+.impact-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #05060a;
+    padding: var(--spacing-lg) 0;
+    /* Add structure around the component */
+    margin: 0;
+}
+
+/* 
+   Reference Wrapper 
+   - This div wraps the image and establishes the positioning context.
+   - It sizes itself naturally based on the image inside.
+*/
+.cta-reference-wrapper {
+    position: relative;
+    width: 98%;
+    max-width: 1800px;
+    margin: 0 auto;
+    /* Ensure no weird line-height gaps */
+    line-height: 0;
+}
+
+/* 
+   Image Styling 
+   - We target the OptimizedImage wrapper and the img tag itself.
+   - Critical: height: auto ensures the image defines the height.
+*/
+.cta-reference-wrapper .cta-bg-image-wrapper {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cta-reference-wrapper .cta-bg-image {
+    width: 100%;
+    height: auto !important;
+    /* Override inline styles from OptimizedImage */
+    display: block;
+    object-fit: contain;
+    /* Ensure full image is visible */
+}
+
+/* 
+   The Overlay 
+   - Sits on top of the image
+*/
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 90%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* 
+   Ornamental Frame 
+   - Absolutely positioned to the reference wrapper (which is exactly image size)
+*/
+.cta-frame {
+    position: absolute;
+    inset: 0;
+    /* Matches image edge exactly */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Corner Accents */
+.cta-frame::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.cta-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 15px;
+    height: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 
+   Text Content 
+   - Centered absolutely within the reference wrapper
+*/
+.cta-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    padding: 0 1rem;
+
+    /* Restore line-height for text */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-label {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta-headline {
+    font-family: var(--font-primary);
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .cta-reference-wrapper {
+        width: 100%;
+        /* Full width on mobile */
+        max-width: 100%;
+    }
+
+    .cta-frame {
+        inset: 0.75rem;
+        /* Small internal breathing room on mobile if desired, or keep 0 */
+        /* User said: "On mobile... frame scales with image... no offset" -> sticking to inset 0 for pure match */
+        inset: 0;
+    }
+}
